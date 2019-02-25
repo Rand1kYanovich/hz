@@ -68,7 +68,7 @@ public class FragmentWaitFinishPartner extends Fragment {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if(dataSnapshot.child("rooms").child(nameRoom).child("Ready").exists()) {
-                    if (dataSnapshot.child("rooms").child(nameRoom).child("Ready").getValue().toString() == "2") {
+                    if (dataSnapshot.child("rooms").child(nameRoom).child("Ready").getValue().toString() == "3") {
                         // ((MainActivity)getActivity()).setFragmentFinal();
                     }
                 }

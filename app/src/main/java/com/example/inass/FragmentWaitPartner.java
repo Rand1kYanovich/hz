@@ -74,7 +74,7 @@ public class FragmentWaitPartner extends Fragment {
 
                 if(dataSnapshot.child("rooms").child(nameRoom+"").child("All").exists()){
                    // if(dataSnapshot.child("rooms").child(nameRoom+"").child("All").getValue().toString() == "Yes") {
-                        Toast.makeText(getContext(),dataSnapshot.child("rooms").child(nameRoom+"").child("All").getValue().toString(),Toast.LENGTH_SHORT).show();
+
 
                         ((MainActivity) getActivity()).setFragmentRoom();
                     //}
