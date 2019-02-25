@@ -76,6 +76,7 @@ public class FragmentRoom extends Fragment {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if(dataSnapshot.child("rooms").child(numberRoom+"").child("Ready").exists() && dataSnapshot.child("rooms").child(numberRoom+"").child("Ready").getValue()!=null)
                 dataReady =dataSnapshot.child("rooms").child(numberRoom).child("Ready").getValue().toString();
+                mDatabaseReference.child("rooms").child(numberRoom).child("All").removeValue();
                 if(dataReady == null) dataReadyQuality = 0;
                 else
                 dataReadyQuality = Integer.parseInt(dataReady);
@@ -113,6 +114,7 @@ public class FragmentRoom extends Fragment {
                         mDatabaseReference.child("rooms").child(numberRoom).child("Ready").setValue(dataReadyQuality+1);
                         qualityCards = 1;
                         ((MainActivity)getActivity()).setFragmentWaitPartnerFinish();
+
                     }
 
 
@@ -127,9 +129,10 @@ public class FragmentRoom extends Fragment {
                     qualityCards = qualityCards-1;
                     if(qualityCards == 0){
                         mDatabaseReference.child("rooms").child(numberRoom).child("Ready").setValue(dataReadyQuality+1);
-                        mDatabaseReference.child("rooms").child(numberRoom).child("All").removeValue();
+                        //mDatabaseReference.child("rooms").child(numberRoom).child("All").removeValue();
                         qualityCards = 1;
                         ((MainActivity)getActivity()).setFragmentWaitPartnerFinish();
+
                     }
                 }
             }));

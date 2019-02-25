@@ -98,6 +98,7 @@ public class MainActivity extends AppCompatActivity {
         fragmentAdapter.addFragments(createFragmentWaitPartner());
         fragmentAdapter.addFragments(createFragmentWaitFinishPartner());
 
+
         viewpager.setAdapter(fragmentAdapter);
 
     }

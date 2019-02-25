@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Mon Feb 25 23:06:05 GMT+04:00 2019
+#Tue Feb 26 00:01:53 GMT+04:00 2019
 1.base=C\:\\AndroidProject\\ASS-master\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\1
 2.path=classes.dex
 0.baseType=DIRECTORY
