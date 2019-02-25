@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "354531419495",
+    "firebase_url": "https://inass-20325.firebaseio.com",
+    "project_id": "inass-20325",
+    "storage_bucket": "inass-20325.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:354531419495:android:f4b50c504e8b3ca2",
+        "android_client_info": {
+          "package_name": "com.example.inass"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "354531419495-in1fp9c73uk5dkr0ji53hr3puceql40j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.inass",
+            "certificate_hash": "0ec3e31de0c2e6afc585d86c79484be42abd5f1e"
+          }
+        },
+        {
+          "client_id": "354531419495-fc7hfnibc2ent3h8b92e2ulg7eqq2g9q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCx-xYXn4pue4ZwUzoaooVyg-8gpdk-8rc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "354531419495-fc7hfnibc2ent3h8b92e2ulg7eqq2g9q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
