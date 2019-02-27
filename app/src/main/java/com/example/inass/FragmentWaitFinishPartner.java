@@ -64,12 +64,15 @@ public class FragmentWaitFinishPartner extends Fragment {
 
         });
 
-        mDatabaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+        mDatabaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if(dataSnapshot.child("rooms").child(nameRoom).child("Ready").exists()) {
-                    if (dataSnapshot.child("rooms").child(nameRoom).child("Ready").getValue().toString() == "3") {
-                        // ((MainActivity)getActivity()).setFragmentFinal();
+                    if (dataSnapshot.child("rooms").child(nameRoom).child("Ready").getValue().toString() == "3" ||
+                            dataSnapshot.child("rooms").child(nameRoom).child("Ready").getValue().toString() == "4") {
+                        ((MainActivity)getActivity()).setFragmentFinal();
+                        Toast.makeText(getContext(),"YEAAA WORKING",Toast.LENGTH_SHORT).show();
+                        mDatabaseReference.child("rooms").child(nameRoom).child("Ready").setValue("4");
                     }
                 }
             }

@@ -74,9 +74,10 @@ public class FragmentRoom extends Fragment {
         mDatabaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if(dataSnapshot.child("rooms").child(numberRoom+"").child("Ready").exists() && dataSnapshot.child("rooms").child(numberRoom+"").child("Ready").getValue()!=null)
-                dataReady =dataSnapshot.child("rooms").child(numberRoom).child("Ready").getValue().toString();
-                mDatabaseReference.child("rooms").child(numberRoom).child("All").removeValue();
+                if(dataSnapshot.child("rooms").child(numberRoom+"").child("Ready").exists() && dataSnapshot.child("rooms").child(numberRoom+"").child("Ready").getValue()!=null) {
+                    dataReady = dataSnapshot.child("rooms").child(numberRoom).child("Ready").getValue().toString();
+                    mDatabaseReference.child("rooms").child(numberRoom).child("All").removeValue();
+                }
                 if(dataReady == null) dataReadyQuality = 0;
                 else
                 dataReadyQuality = Integer.parseInt(dataReady);

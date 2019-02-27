@@ -96,6 +96,7 @@ public class MainActivity extends AppCompatActivity {
         fragmentAdapter.addFragments(createFragmentSearch());
         fragmentAdapter.addFragments(createFragmentRoom());
         fragmentAdapter.addFragments(createFragmentWaitPartner());
+        fragmentAdapter.addFragments(createFragmentFinal());
         fragmentAdapter.addFragments(createFragmentWaitFinishPartner());
 
 
@@ -125,8 +126,13 @@ public class MainActivity extends AppCompatActivity {
         FragmentWaitFinishPartner fragmentWaitFinishPartner = new FragmentWaitFinishPartner();
         return fragmentWaitFinishPartner;
     }
+    private FragmentFinal createFragmentFinal(){
+        FragmentFinal fragmentFinal = new FragmentFinal();
+        return fragmentFinal;
+    }
 
-    public void setFragmentWaitPartnerFinish(){viewpager.setCurrentItem(4);}
+    public void setFragmentFinal(){viewpager.setCurrentItem(4);}
+    public void setFragmentWaitPartnerFinish(){viewpager.setCurrentItem(5);}
     public void setFragmentWaitPartner (){
         viewpager.setCurrentItem(3);
     }
