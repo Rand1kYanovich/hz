@@ -64,7 +64,7 @@ public class FragmentCreate extends Fragment {
 
 
         sPref = getActivity().getPreferences(MODE_PRIVATE);
-        Toast.makeText(getContext(),sPref.getString("Id","FUCK"),Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getContext(),sPref.getString("Id","FUCK"),Toast.LENGTH_SHORT).show();
 
 
         initFirebase();

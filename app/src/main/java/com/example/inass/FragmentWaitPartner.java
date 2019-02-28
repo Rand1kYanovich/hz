@@ -73,12 +73,7 @@ public class FragmentWaitPartner extends Fragment {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
                 if(dataSnapshot.child("rooms").child(nameRoom+"").child("All").exists()){
-                   // if(dataSnapshot.child("rooms").child(nameRoom+"").child("All").getValue().toString() == "Yes") {
-
-
                         ((MainActivity) getActivity()).setFragmentRoom();
-                    //}
-
                 }
             }
 

@@ -110,7 +110,11 @@ public class FragmentRoom extends Fragment {
                     if(qualityCards == 0){
 
 
-
+                        try {
+                            Thread.sleep(100);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
                         mDatabaseReference.child("rooms").child(numberRoom).child("All").removeValue();
                         mDatabaseReference.child("rooms").child(numberRoom).child("Ready").setValue(dataReadyQuality+1);
                         qualityCards = 1;

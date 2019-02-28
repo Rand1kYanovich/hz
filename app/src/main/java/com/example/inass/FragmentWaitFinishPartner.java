@@ -68,11 +68,10 @@ public class FragmentWaitFinishPartner extends Fragment {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if(dataSnapshot.child("rooms").child(nameRoom).child("Ready").exists()) {
-                    if (dataSnapshot.child("rooms").child(nameRoom).child("Ready").getValue().toString() == "3" ||
-                            dataSnapshot.child("rooms").child(nameRoom).child("Ready").getValue().toString() == "4") {
-                        ((MainActivity)getActivity()).setFragmentFinal();
-                        Toast.makeText(getContext(),"YEAAA WORKING",Toast.LENGTH_SHORT).show();
-                        mDatabaseReference.child("rooms").child(nameRoom).child("Ready").setValue("4");
+                    if (dataSnapshot.child("rooms").child(nameRoom).child("Ready").getValue().toString() == "3" ) {
+                        //((MainActivity) getActivity()).setFragmentFinal();
+                        mDatabaseReference.child("rooms").child(nameRoom).child("AllReady").setValue("AllReady");
+
                     }
                 }
             }
@@ -82,6 +81,21 @@ public class FragmentWaitFinishPartner extends Fragment {
 
             }
         });
+        mDatabaseReference.child("rooms").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if (dataSnapshot.child(nameRoom).child("AllReady").exists()) {
+                    ((MainActivity) getActivity()).setFragmentFinal();
+                    Toast.makeText(getContext(),"YEAAA WORKING",Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
 
 
 

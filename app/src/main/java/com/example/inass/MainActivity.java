@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
             mDatabaseReference.child("user").child(user_id).child("id").setValue(user_id);
         }
 
-       Toast.makeText(getApplicationContext(),user_id,Toast.LENGTH_SHORT).show();
+      // Toast.makeText(getApplicationContext(),user_id,Toast.LENGTH_SHORT).show();
 
 
 
@@ -101,6 +101,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         viewpager.setAdapter(fragmentAdapter);
+
 
     }
 
@@ -153,6 +154,13 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public int getViewpager(){
+        return this.viewpager.getCurrentItem();
+    }
+
+    public NoSwipePager getViewPagerSwipe(){
+        return this.viewpager;
+    }
 
 
 
